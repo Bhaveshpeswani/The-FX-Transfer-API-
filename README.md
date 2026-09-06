@@ -11,4 +11,3 @@
 * **Audit Trail:** Maintain a complete transaction history for every account.
 * **Graceful Error Handling:** Clean, user-friendly error messages (no messy stack traces).
 * **Database:** Configured to switch seamlessly from an in-memory H2 database to a production-ready PostgreSQL database.
-* **Live Deployment:** Hosted and accessible live on Railway.
