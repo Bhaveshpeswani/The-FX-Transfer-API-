@@ -1,13 +1,17 @@
-# The FX Transfer API 
+# The FX Transfer API
 
-> A robust backend banking system deployed live on the internet. It allows users to create accounts in different currencies, transfer money with real fee logic, and track every transaction with clean error handling.
+A Spring Boot backend for creating currency accounts and moving money between them.
 
-###  Core Features
+The project covers deposits, withdrawals, transfer fees, transaction states and persistence in PostgreSQL.
 
-* **Account Management:** Create and fetch user accounts across multiple currencies.
-* **Core Banking:** Deposit and withdraw funds securely.
-* **Smart Transfers:** Transfer money between accounts with automated fee calculation.
-* **Transaction Lifecycle:** Track transfer statuses precisely (`PENDING` → `COMPLETED` / `FAILED`).
-* **Audit Trail:** Maintain a complete transaction history for every account.
-* **Graceful Error Handling:** Clean, user-friendly error messages (no messy stack traces).
-* **Database:** Configured to switch seamlessly from an in-memory H2 database to a production-ready PostgreSQL database.
+## Features
+
+- Create and retrieve currency accounts
+- Deposit and withdraw account balances
+- Transfer money between accounts
+- Calculate a fee for each transfer
+- Track transfers through `PENDING`, `COMPLETED` and `FAILED` states
+- Store transaction history
+- Return structured error responses for invalid requests
+- Use H2 for local development and PostgreSQL for persistent deployments
+- Prevent duplicate transfers by returning the existing result when the same idempotency key is submitted again
